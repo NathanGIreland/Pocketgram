@@ -21,9 +21,17 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signUpAction(_ sender: Any) {
-        Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!)
+        Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) {authResult, error in
+            
+            if authResult?.user != nil {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }else{
+                print("Sign up error: \(String(describing: error))")
+            }
+            
+        }
+       
         
-        print("sign up")
     }
     
     /*
