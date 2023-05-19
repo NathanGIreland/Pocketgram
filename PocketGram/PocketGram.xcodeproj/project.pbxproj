@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDE5F8212A1721AF00AFDF93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8202A1721AF00AFDF93 /* AppDelegate.swift */; };
+		EDE5F8232A1721AF00AFDF93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8222A1721AF00AFDF93 /* SceneDelegate.swift */; };
+		EDE5F8282A1721AF00AFDF93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE5F8262A1721AF00AFDF93 /* Main.storyboard */; };
+		EDE5F82A2A1721B100AFDF93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE5F8292A1721B100AFDF93 /* Assets.xcassets */; };
+		EDE5F82D2A1721B100AFDF93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE5F82B2A1721B100AFDF93 /* LaunchScreen.storyboard */; };
+		EDE5F8382A1721B200AFDF93 /* PocketGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8372A1721B200AFDF93 /* PocketGramTests.swift */; };
+		EDE5F8422A1721B200AFDF93 /* PocketGramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8412A1721B200AFDF93 /* PocketGramUITests.swift */; };
+		EDE5F8442A1721B200AFDF93 /* PocketGramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8432A1721B200AFDF93 /* PocketGramUITestsLaunchTests.swift */; };
+		EDE5F8552A17250700AFDF93 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8542A17250700AFDF93 /* User.swift */; };
+		EDE5F8572A17299900AFDF93 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8562A17299900AFDF93 /* LoginViewController.swift */; };
+		EDE5F8592A1729E400AFDF93 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8582A1729E400AFDF93 /* FeedViewController.swift */; };
+		EDE5F8622A172E7D00AFDF93 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F8612A172E7D00AFDF93 /* FirebaseAnalytics */; };
+		EDE5F8642A172E7D00AFDF93 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F8632A172E7D00AFDF93 /* FirebaseAuth */; };
+		EDE5F8662A172E7D00AFDF93 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F8652A172E7D00AFDF93 /* FirebaseAuthCombine-Community */; };
+		EDE5F8682A172E7D00AFDF93 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F8672A172E7D00AFDF93 /* FirebaseDatabase */; };
+		EDE5F86A2A172E7D00AFDF93 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F8692A172E7D00AFDF93 /* FirebaseDatabaseSwift */; };
+		EDE5F86C2A172E7D00AFDF93 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F86B2A172E7D00AFDF93 /* FirebaseFirestore */; };
+		EDE5F86E2A172E7D00AFDF93 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F86D2A172E7D00AFDF93 /* FirebaseFirestoreCombine-Community */; };
+		EDE5F8702A172E7D00AFDF93 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F86F2A172E7D00AFDF93 /* FirebaseFirestoreSwift */; };
+		EDE5F8722A172E7D00AFDF93 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F8712A172E7D00AFDF93 /* FirebaseFunctions */; };
+		EDE5F8742A172E7D00AFDF93 /* FirebaseFunctionsCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F8732A172E7D00AFDF93 /* FirebaseFunctionsCombine-Community */; };
+		EDE5F8762A172E7D00AFDF93 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F8752A172E7D00AFDF93 /* FirebaseStorage */; };
+		EDE5F8782A172E7D00AFDF93 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F8772A172E7D00AFDF93 /* FirebaseStorageCombine-Community */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDE5F8342A1721B200AFDF93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDE5F8152A1721AF00AFDF93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDE5F81C2A1721AF00AFDF93;
+			remoteInfo = PocketGram;
+		};
+		EDE5F83E2A1721B200AFDF93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDE5F8152A1721AF00AFDF93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDE5F81C2A1721AF00AFDF93;
+			remoteInfo = PocketGram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EDE5F81D2A1721AF00AFDF93 /* PocketGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE5F8202A1721AF00AFDF93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDE5F8222A1721AF00AFDF93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EDE5F8272A1721AF00AFDF93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDE5F8292A1721B100AFDF93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDE5F82C2A1721B100AFDF93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDE5F82E2A1721B100AFDF93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE5F8332A1721B200AFDF93 /* PocketGramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketGramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE5F8372A1721B200AFDF93 /* PocketGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketGramTests.swift; sourceTree = "<group>"; };
+		EDE5F83D2A1721B200AFDF93 /* PocketGramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketGramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE5F8412A1721B200AFDF93 /* PocketGramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketGramUITests.swift; sourceTree = "<group>"; };
+		EDE5F8432A1721B200AFDF93 /* PocketGramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketGramUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EDE5F8542A17250700AFDF93 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EDE5F8562A17299900AFDF93 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EDE5F8582A1729E400AFDF93 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDE5F81A2A1721AF00AFDF93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE5F86A2A172E7D00AFDF93 /* FirebaseDatabaseSwift in Frameworks */,
+				EDE5F8622A172E7D00AFDF93 /* FirebaseAnalytics in Frameworks */,
+				EDE5F8662A172E7D00AFDF93 /* FirebaseAuthCombine-Community in Frameworks */,
+				EDE5F8742A172E7D00AFDF93 /* FirebaseFunctionsCombine-Community in Frameworks */,
+				EDE5F8722A172E7D00AFDF93 /* FirebaseFunctions in Frameworks */,
+				EDE5F8682A172E7D00AFDF93 /* FirebaseDatabase in Frameworks */,
+				EDE5F8642A172E7D00AFDF93 /* FirebaseAuth in Frameworks */,
+				EDE5F86C2A172E7D00AFDF93 /* FirebaseFirestore in Frameworks */,
+				EDE5F8762A172E7D00AFDF93 /* FirebaseStorage in Frameworks */,
+				EDE5F86E2A172E7D00AFDF93 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				EDE5F8782A172E7D00AFDF93 /* FirebaseStorageCombine-Community in Frameworks */,
+				EDE5F8702A172E7D00AFDF93 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE5F8302A1721B200AFDF93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE5F83A2A1721B200AFDF93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDE5F8142A1721AF00AFDF93 = {
+			isa = PBXGroup;
+			children = (
+				EDE5F8532A17243100AFDF93 /* Controller */,
+				EDE5F8522A17242A00AFDF93 /* View */,
+				EDE5F8502A1723DF00AFDF93 /* Model */,
+				EDE5F81F2A1721AF00AFDF93 /* PocketGram */,
+				EDE5F8362A1721B200AFDF93 /* PocketGramTests */,
+				EDE5F8402A1721B200AFDF93 /* PocketGramUITests */,
+				EDE5F81E2A1721AF00AFDF93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDE5F81E2A1721AF00AFDF93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDE5F81D2A1721AF00AFDF93 /* PocketGram.app */,
+				EDE5F8332A1721B200AFDF93 /* PocketGramTests.xctest */,
+				EDE5F83D2A1721B200AFDF93 /* PocketGramUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDE5F81F2A1721AF00AFDF93 /* PocketGram */ = {
+			isa = PBXGroup;
+			children = (
+				EDE5F8202A1721AF00AFDF93 /* AppDelegate.swift */,
+				EDE5F8222A1721AF00AFDF93 /* SceneDelegate.swift */,
+				EDE5F8262A1721AF00AFDF93 /* Main.storyboard */,
+				EDE5F8292A1721B100AFDF93 /* Assets.xcassets */,
+				EDE5F82B2A1721B100AFDF93 /* LaunchScreen.storyboard */,
+				EDE5F82E2A1721B100AFDF93 /* Info.plist */,
+			);
+			path = PocketGram;
+			sourceTree = "<group>";
+		};
+		EDE5F8362A1721B200AFDF93 /* PocketGramTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDE5F8372A1721B200AFDF93 /* PocketGramTests.swift */,
+			);
+			path = PocketGramTests;
+			sourceTree = "<group>";
+		};
+		EDE5F8402A1721B200AFDF93 /* PocketGramUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDE5F8412A1721B200AFDF93 /* PocketGramUITests.swift */,
+				EDE5F8432A1721B200AFDF93 /* PocketGramUITestsLaunchTests.swift */,
+			);
+			path = PocketGramUITests;
+			sourceTree = "<group>";
+		};
+		EDE5F8502A1723DF00AFDF93 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EDE5F8542A17250700AFDF93 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EDE5F8522A17242A00AFDF93 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDE5F8532A17243100AFDF93 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EDE5F8562A17299900AFDF93 /* LoginViewController.swift */,
+				EDE5F8582A1729E400AFDF93 /* FeedViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDE5F81C2A1721AF00AFDF93 /* PocketGram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE5F8472A1721B200AFDF93 /* Build configuration list for PBXNativeTarget "PocketGram" */;
+			buildPhases = (
+				EDE5F8192A1721AF00AFDF93 /* Sources */,
+				EDE5F81A2A1721AF00AFDF93 /* Frameworks */,
+				EDE5F81B2A1721AF00AFDF93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PocketGram;
+			packageProductDependencies = (
+				EDE5F8612A172E7D00AFDF93 /* FirebaseAnalytics */,
+				EDE5F8632A172E7D00AFDF93 /* FirebaseAuth */,
+				EDE5F8652A172E7D00AFDF93 /* FirebaseAuthCombine-Community */,
+				EDE5F8672A172E7D00AFDF93 /* FirebaseDatabase */,
+				EDE5F8692A172E7D00AFDF93 /* FirebaseDatabaseSwift */,
+				EDE5F86B2A172E7D00AFDF93 /* FirebaseFirestore */,
+				EDE5F86D2A172E7D00AFDF93 /* FirebaseFirestoreCombine-Community */,
+				EDE5F86F2A172E7D00AFDF93 /* FirebaseFirestoreSwift */,
+				EDE5F8712A172E7D00AFDF93 /* FirebaseFunctions */,
+				EDE5F8732A172E7D00AFDF93 /* FirebaseFunctionsCombine-Community */,
+				EDE5F8752A172E7D00AFDF93 /* FirebaseStorage */,
+				EDE5F8772A172E7D00AFDF93 /* FirebaseStorageCombine-Community */,
+			);
+			productName = PocketGram;
+			productReference = EDE5F81D2A1721AF00AFDF93 /* PocketGram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDE5F8322A1721B200AFDF93 /* PocketGramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE5F84A2A1721B200AFDF93 /* Build configuration list for PBXNativeTarget "PocketGramTests" */;
+			buildPhases = (
+				EDE5F82F2A1721B200AFDF93 /* Sources */,
+				EDE5F8302A1721B200AFDF93 /* Frameworks */,
+				EDE5F8312A1721B200AFDF93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDE5F8352A1721B200AFDF93 /* PBXTargetDependency */,
+			);
+			name = PocketGramTests;
+			productName = PocketGramTests;
+			productReference = EDE5F8332A1721B200AFDF93 /* PocketGramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EDE5F83C2A1721B200AFDF93 /* PocketGramUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE5F84D2A1721B200AFDF93 /* Build configuration list for PBXNativeTarget "PocketGramUITests" */;
+			buildPhases = (
+				EDE5F8392A1721B200AFDF93 /* Sources */,
+				EDE5F83A2A1721B200AFDF93 /* Frameworks */,
+				EDE5F83B2A1721B200AFDF93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDE5F83F2A1721B200AFDF93 /* PBXTargetDependency */,
+			);
+			name = PocketGramUITests;
+			productName = PocketGramUITests;
+			productReference = EDE5F83D2A1721B200AFDF93 /* PocketGramUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDE5F8152A1721AF00AFDF93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					EDE5F81C2A1721AF00AFDF93 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					EDE5F8322A1721B200AFDF93 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = EDE5F81C2A1721AF00AFDF93;
+					};
+					EDE5F83C2A1721B200AFDF93 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = EDE5F81C2A1721AF00AFDF93;
+					};
+				};
+			};
+			buildConfigurationList = EDE5F8182A1721AF00AFDF93 /* Build configuration list for PBXProject "PocketGram" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDE5F8142A1721AF00AFDF93;
+			packageReferences = (
+				EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = EDE5F81E2A1721AF00AFDF93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDE5F81C2A1721AF00AFDF93 /* PocketGram */,
+				EDE5F8322A1721B200AFDF93 /* PocketGramTests */,
+				EDE5F83C2A1721B200AFDF93 /* PocketGramUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDE5F81B2A1721AF00AFDF93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE5F82D2A1721B100AFDF93 /* LaunchScreen.storyboard in Resources */,
+				EDE5F82A2A1721B100AFDF93 /* Assets.xcassets in Resources */,
+				EDE5F8282A1721AF00AFDF93 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE5F8312A1721B200AFDF93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE5F83B2A1721B200AFDF93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDE5F8192A1721AF00AFDF93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE5F8572A17299900AFDF93 /* LoginViewController.swift in Sources */,
+				EDE5F8552A17250700AFDF93 /* User.swift in Sources */,
+				EDE5F8592A1729E400AFDF93 /* FeedViewController.swift in Sources */,
+				EDE5F8212A1721AF00AFDF93 /* AppDelegate.swift in Sources */,
+				EDE5F8232A1721AF00AFDF93 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE5F82F2A1721B200AFDF93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE5F8382A1721B200AFDF93 /* PocketGramTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE5F8392A1721B200AFDF93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE5F8422A1721B200AFDF93 /* PocketGramUITests.swift in Sources */,
+				EDE5F8442A1721B200AFDF93 /* PocketGramUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDE5F8352A1721B200AFDF93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDE5F81C2A1721AF00AFDF93 /* PocketGram */;
+			targetProxy = EDE5F8342A1721B200AFDF93 /* PBXContainerItemProxy */;
+		};
+		EDE5F83F2A1721B200AFDF93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDE5F81C2A1721AF00AFDF93 /* PocketGram */;
+			targetProxy = EDE5F83E2A1721B200AFDF93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EDE5F8262A1721AF00AFDF93 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDE5F8272A1721AF00AFDF93 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EDE5F82B2A1721B100AFDF93 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDE5F82C2A1721B100AFDF93 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDE5F8452A1721B200AFDF93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDE5F8462A1721B200AFDF93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDE5F8482A1721B200AFDF93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y6NYXF83D8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PocketGram/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathangi.PocketGram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDE5F8492A1721B200AFDF93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y6NYXF83D8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PocketGram/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathangi.PocketGram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EDE5F84B2A1721B200AFDF93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y6NYXF83D8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathangi.PocketGramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketGram.app/PocketGram";
+			};
+			name = Debug;
+		};
+		EDE5F84C2A1721B200AFDF93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y6NYXF83D8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathangi.PocketGramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketGram.app/PocketGram";
+			};
+			name = Release;
+		};
+		EDE5F84E2A1721B200AFDF93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y6NYXF83D8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathangi.PocketGramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PocketGram;
+			};
+			name = Debug;
+		};
+		EDE5F84F2A1721B200AFDF93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y6NYXF83D8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathangi.PocketGramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PocketGram;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDE5F8182A1721AF00AFDF93 /* Build configuration list for PBXProject "PocketGram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE5F8452A1721B200AFDF93 /* Debug */,
+				EDE5F8462A1721B200AFDF93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE5F8472A1721B200AFDF93 /* Build configuration list for PBXNativeTarget "PocketGram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE5F8482A1721B200AFDF93 /* Debug */,
+				EDE5F8492A1721B200AFDF93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE5F84A2A1721B200AFDF93 /* Build configuration list for PBXNativeTarget "PocketGramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE5F84B2A1721B200AFDF93 /* Debug */,
+				EDE5F84C2A1721B200AFDF93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE5F84D2A1721B200AFDF93 /* Build configuration list for PBXNativeTarget "PocketGramUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE5F84E2A1721B200AFDF93 /* Debug */,
+				EDE5F84F2A1721B200AFDF93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDE5F8612A172E7D00AFDF93 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		EDE5F8632A172E7D00AFDF93 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		EDE5F8652A172E7D00AFDF93 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		EDE5F8672A172E7D00AFDF93 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		EDE5F8692A172E7D00AFDF93 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		EDE5F86B2A172E7D00AFDF93 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		EDE5F86D2A172E7D00AFDF93 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		EDE5F86F2A172E7D00AFDF93 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		EDE5F8712A172E7D00AFDF93 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		EDE5F8732A172E7D00AFDF93 /* FirebaseFunctionsCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFunctionsCombine-Community";
+		};
+		EDE5F8752A172E7D00AFDF93 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		EDE5F8772A172E7D00AFDF93 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE5F8602A172E7D00AFDF93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EDE5F8152A1721AF00AFDF93 /* Project object */;
+}
