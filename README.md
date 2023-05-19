@@ -1,6 +1,6 @@
 # Pocketgram
 
-Currently, I have a repository with a project named "Parstsgram." The goal of this project was to learn how to build an iOS application with similar features to Instagram. However, the code in its current state is poorly organized and difficult to read. In this new project, my plan is to refactor it, focusing on improving its organization and implementing the Model-View-Controller (MVC) design pattern. Additionally, I aim to expand its functionality and learn new tools along the way.
+Currently, I have a repository with a project named "Parstsgram." The goal of that project was to learn how to build an iOS application with similar features to Instagram. However, the code in its current state is poorly organized and difficult to read. In this new project, my plan is to refactor it, focusing on improving its organization and implementing the Model-View-Controller (MVC) design pattern. Additionally, I aim to expand its functionality and learn new tools along the way.
 
 The main motivation behind this project is to transform the existing codebase into a more maintainable and structured project. As an iOS Developer, I am also eager to enhance my skills and knowledge in both frontend and backend development.
 
