@@ -18,21 +18,20 @@ To create a comprehensive Instagram clone app, I intend to leverage the followin
 
 ### Version 1 Features (MVP)
 
- [ ] Styled Launch & Login Screen.
- [ ] Users can Sign Up.
- [ ] Users can Login.
- [ ] Ability to take a photo, add a caption, and post it to the server.
- [ ] Users can pull to refresh.
- [ ] Users can view the last n# of posts.
+- [ ] Styled Launch & Login Screen.
+- [ ] Users can Sign Up.
+- [ ] Users can Login.
+- [ ] Ability to take a photo, add a caption, and post it to the server.
+- [ ] Users can pull to refresh.
+- [ ] Users can view the last n# of posts.
 
 ### Future Features
 
- [ ] Location Tagging.
- [ ] Ability to stay logged in across restarts.
- [ ] Users can log out.
- [ ] Users can comment on posts.
- [ ] View comments on posts.
- [ ] Users can add new comments.
- [ ] Users can add profile pictures.
- [ ] Profile pictures are shown for posts and comments.
-
+- [ ] Location Tagging.
+- [ ] Ability to stay logged in across restarts.
+- [ ] Users can log out.
+- [ ] Users can comment on posts.
+- [ ] View comments on posts.
+- [ ] Users can add new comments.
+- [ ] Users can add profile pictures.
+- [ ] Profile pictures are shown for posts and comments.
