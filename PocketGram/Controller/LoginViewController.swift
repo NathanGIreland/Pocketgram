@@ -12,18 +12,13 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var signUpBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func signUpAction(_ sender: Any) {
-        Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!)
-        
-        print("sign up")
     }
     
     /*
@@ -35,7 +30,32 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func loginAction(_ sender: Any) {
+        Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text! ){authResult, error in
+            
+            if authResult?.user != nil {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }else{
+                print("Login errors: \(String(describing: error?.localizedDescription))")
+            }
+        }
+    }
+    
+    @IBAction func signUpAction(_ sender: Any) {
+        Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) {authResult, error in
+            
+            if authResult?.user != nil {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }else{
+                print("Sign up errors: \(String(describing: error?.localizedDescription))")
+            }
+            
+        }
+        
+    }
 
 }
+
 
 

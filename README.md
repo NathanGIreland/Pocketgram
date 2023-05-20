@@ -35,3 +35,8 @@ To create a comprehensive Instagram clone app, I intend to leverage the followin
 - [ ] Users can add new comments.
 - [ ] Users can add profile pictures.
 - [ ] Profile pictures are shown for posts and comments.
+
+### Acknowledgements
+####Fonts
+- <a href="https://open-foundry.com/fonts/junicode_bold_condensed">Junicode</a>
+
