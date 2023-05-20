@@ -7,23 +7,36 @@
 
 import FirebaseCore
 import FirebaseFirestore
+import FirebaseAuth
 import UIKit
 
 class FeedViewController: UIViewController {
     
+    var currentUser: User?
     var ref: DocumentReference? = nil
     let db = Firestore.firestore()
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
+         
+        if Auth.auth().currentUser != nil {
+            currentUser = Auth.auth().currentUser
+            print("User Found")
+        }else{
+            performSegue(withIdentifier: "userNotFoundSegue", sender: nil)
+        }
+        
 
         ref = db.collection("Users").addDocument(data: [
             "First Name": "nathan",
             "Last Name": "i",
+            "email": currentUser?.email ?? "",
+            "username": "@1232",
             "profile-picture": "https://",
             "status": "💀",
             "bio": "fun",
-            "uid": 123,
+            "uid": currentUser?.uid ?? "",
             
         ]) { err in
             if let err = err {

@@ -114,6 +114,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="CfF-Nh-e1h"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="userNotFoundSegue" modalPresentationStyle="fullScreen" id="G02-kH-8Rc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDF-wL-moQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
