@@ -5,14 +5,37 @@
 //  Created by Nathan Ireland on 5/18/23.
 //
 
+import FirebaseCore
+import FirebaseFirestore
 import UIKit
 
 class FeedViewController: UIViewController {
+    
+    var ref: DocumentReference? = nil
+    let db = Firestore.firestore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        ref = db.collection("Users").addDocument(data: [
+            "First Name": "nathan",
+            "Last Name": "i",
+            "profile-picture": "https://",
+            "status": "💀",
+            "bio": "fun",
+            "uid": 123,
+            
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            }else{
+                print("Document added with ID: \(self.ref!.documentID)")
+            }
+        }
+        
+        
+        
+        
     }
     
 
