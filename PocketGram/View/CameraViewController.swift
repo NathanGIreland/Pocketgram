@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import PhotosUI
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
+    @IBOutlet weak var commentField: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,16 +25,34 @@ class CameraViewController: UIViewController {
         self.performSegue(withIdentifier: "unwindToFeed", sender: nil)
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onCameraBtn(_ sender: Any) {
+//        var phpickerConfig = PHPickerConfiguration()
+//        phpickerConfig.filter = .images
+//
+//        let picker = PHPickerViewController(configuration: phpickerConfig)
+//
+//        picker.delegate = self
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+        }else{
+            imagePicker.sourceType = .photoLibrary
+        }
+        
+        present(imagePicker, animated: true)
     }
-    */
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.editedImage] as! UIImage
+    }
+    
+    
+    @IBAction func onSubmitBtn(_ sender: Any) {
+    }
+    
 
 }

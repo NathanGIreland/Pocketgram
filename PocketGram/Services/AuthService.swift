@@ -50,8 +50,8 @@ final class AuthService{
                   print("Sign up errors: \(error.localizedDescription)")
                   completion(false)
               } else if authResult?.user.email != nil {
-                  print("User successfully signed up")
-                  createNewUser(_ user: userModel)
+                  print("successfully signed up")
+                  self.createNewUser(userModel(firstName: "", lastName: "", email: email, username: "", profilePicture: "", status: "", bio: "", uid: (authResult?.user.uid)!))
                   completion(true)
               } else {
                   print("Unexpected error occurred")

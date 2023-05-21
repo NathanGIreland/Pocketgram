@@ -140,48 +140,53 @@
         <scene sceneID="hsc-8n-iKw">
             <objects>
                 <viewController id="Eok-V8-l6R" customClass="CameraViewController" customModule="PocketGram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="NtR-68-noN">
+                    <view key="view" contentMode="scaleToFill" id="NtR-68-noN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missingphtoto" translatesAutoresizingMaskIntoConstraints="NO" id="gNb-N1-flp">
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missingphtoto" translatesAutoresizingMaskIntoConstraints="NO" id="gNb-N1-flp">
                                 <rect key="frame" x="20" y="109" width="374" height="335"/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="gNb-N1-flp" secondAttribute="height" multiplier="374:335" id="68h-IW-znc"/>
-                                    <constraint firstAttribute="height" constant="335" id="cmB-Zd-d2h"/>
+                                    <constraint firstAttribute="height" constant="335" id="Bm8-r0-eWe"/>
+                                    <constraint firstAttribute="width" secondItem="gNb-N1-flp" secondAttribute="height" multiplier="374:335" id="pef-Ge-tCw"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="r8O-PW-aQd" appends="YES" id="Fhd-St-nGs"/>
+                                </connections>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A5y-Un-EM2">
-                                <rect key="frame" x="20" y="452" width="374" height="34"/>
+                                <rect key="frame" x="20" y="503" width="374" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="P60-HK-0dd"/>
+                                    <constraint firstAttribute="height" constant="34" id="vfG-S1-tzL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIE-5Q-ibq">
-                                <rect key="frame" x="76" y="529" width="262" height="35"/>
+                                <rect key="frame" x="76" y="572" width="262" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="HpU-2P-56B"/>
+                                    <constraint firstAttribute="height" constant="35" id="uVA-Wv-nbN"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmitBtn:" destination="Eok-V8-l6R" eventType="touchUpInside" id="CdJ-CZ-YCw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3d1-AN-EBa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gNb-N1-flp" firstAttribute="centerX" secondItem="NtR-68-noN" secondAttribute="centerX" id="467-CN-EZ5"/>
-                            <constraint firstItem="A5y-Un-EM2" firstAttribute="top" secondItem="gNb-N1-flp" secondAttribute="bottom" constant="8" symbolic="YES" id="6bY-7Q-3CM"/>
-                            <constraint firstItem="gNb-N1-flp" firstAttribute="top" secondItem="3d1-AN-EBa" secondAttribute="top" constant="17" id="7GU-h7-Hlp"/>
-                            <constraint firstItem="oIE-5Q-ibq" firstAttribute="top" secondItem="A5y-Un-EM2" secondAttribute="bottom" constant="43" id="8x5-Ub-J5W"/>
-                            <constraint firstItem="A5y-Un-EM2" firstAttribute="leading" secondItem="NtR-68-noN" secondAttribute="leadingMargin" id="Ltx-QO-YsQ"/>
-                            <constraint firstItem="gNb-N1-flp" firstAttribute="centerY" secondItem="NtR-68-noN" secondAttribute="centerY" id="Smu-zi-iTp"/>
-                            <constraint firstItem="3d1-AN-EBa" firstAttribute="trailing" secondItem="gNb-N1-flp" secondAttribute="trailing" constant="20" id="X5p-7j-H9k"/>
-                            <constraint firstItem="A5y-Un-EM2" firstAttribute="trailing" secondItem="NtR-68-noN" secondAttribute="trailingMargin" id="cIX-ZG-W9F"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oIE-5Q-ibq" secondAttribute="trailing" constant="56" id="gSa-Lf-5oi"/>
-                            <constraint firstItem="oIE-5Q-ibq" firstAttribute="leading" secondItem="NtR-68-noN" secondAttribute="leadingMargin" constant="56" id="ipi-yj-XpE"/>
-                            <constraint firstItem="gNb-N1-flp" firstAttribute="leading" secondItem="3d1-AN-EBa" secondAttribute="leading" constant="20" id="opa-8d-DWV"/>
+                            <constraint firstItem="3d1-AN-EBa" firstAttribute="trailing" secondItem="A5y-Un-EM2" secondAttribute="trailing" constant="20" id="GXO-3O-jC8"/>
+                            <constraint firstItem="A5y-Un-EM2" firstAttribute="leading" secondItem="3d1-AN-EBa" secondAttribute="leading" constant="20" id="Mdq-wC-ppj"/>
+                            <constraint firstItem="gNb-N1-flp" firstAttribute="leading" secondItem="3d1-AN-EBa" secondAttribute="leading" constant="20" id="PMJ-wf-tIk"/>
+                            <constraint firstItem="oIE-5Q-ibq" firstAttribute="top" secondItem="A5y-Un-EM2" secondAttribute="bottom" constant="35" id="RuH-9t-BJ2"/>
+                            <constraint firstItem="gNb-N1-flp" firstAttribute="top" secondItem="3d1-AN-EBa" secondAttribute="top" constant="17" id="WxF-X8-cH2"/>
+                            <constraint firstItem="3d1-AN-EBa" firstAttribute="trailing" secondItem="gNb-N1-flp" secondAttribute="trailing" constant="20" id="bYc-Qn-4KR"/>
+                            <constraint firstItem="oIE-5Q-ibq" firstAttribute="leading" secondItem="3d1-AN-EBa" secondAttribute="leading" constant="76" id="tYp-pR-PON"/>
+                            <constraint firstItem="A5y-Un-EM2" firstAttribute="top" secondItem="gNb-N1-flp" secondAttribute="bottom" constant="59" id="wch-KU-6Fe"/>
+                            <constraint firstItem="3d1-AN-EBa" firstAttribute="trailing" secondItem="oIE-5Q-ibq" secondAttribute="trailing" constant="76" id="zDf-s6-G5e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZbZ-Nz-ATo">
@@ -190,7 +195,7 @@
                                 <rect key="frame" x="20" y="5" width="92" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
                                 <connections>
                                     <action selector="onReturnBtn:" destination="Eok-V8-l6R" eventType="touchUpInside" id="LKQ-td-W9w"/>
                                 </connections>
@@ -200,8 +205,17 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="commentField" destination="A5y-Un-EM2" id="LSt-Mg-zbG"/>
+                        <outlet property="imageView" destination="gNb-N1-flp" id="eL8-Lo-aML"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YL9-aF-EVr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="r8O-PW-aQd">
+                    <connections>
+                        <action selector="onCameraBtn:" destination="Eok-V8-l6R" id="3Mp-dJ-8or"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3650.7246376811595" y="79.6875"/>
         </scene>
@@ -243,6 +257,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="missingphtoto" width="123" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
