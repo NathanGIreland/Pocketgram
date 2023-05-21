@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginAction(_ sender: Any) {
         try? Auth.auth().signOut()
         
-        LSViewModel.Login(emailField.text!, passwordField.text!)
+        LSViewModel.login(emailField.text!, passwordField.text!)
         preformSegue(loggedSignedSegue, isUserAuthenticated)
         
     }

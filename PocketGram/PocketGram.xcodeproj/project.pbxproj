@@ -13,6 +13,7 @@
 		ED8C2CCD2A182FD300AE2D6D /* Junicode-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED8C2CCC2A182FD300AE2D6D /* Junicode-Bold.ttf */; };
 		ED8C2CD32A18744000AE2D6D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C2CD22A18744000AE2D6D /* User.swift */; };
 		ED8C2CD92A19781200AE2D6D /* LoginSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C2CD82A19781200AE2D6D /* LoginSignupViewModel.swift */; };
+		ED8C2CDC2A19E20400AE2D6D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C2CDB2A19E20400AE2D6D /* AuthService.swift */; };
 		EDE5F8212A1721AF00AFDF93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8202A1721AF00AFDF93 /* AppDelegate.swift */; };
 		EDE5F8232A1721AF00AFDF93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8222A1721AF00AFDF93 /* SceneDelegate.swift */; };
 		EDE5F8282A1721AF00AFDF93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE5F8262A1721AF00AFDF93 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		ED8C2CCC2A182FD300AE2D6D /* Junicode-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Junicode-Bold.ttf"; path = "../../../../../Downloads/junicode-1/Junicode-Bold.ttf"; sourceTree = "<group>"; };
 		ED8C2CD22A18744000AE2D6D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ED8C2CD82A19781200AE2D6D /* LoginSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewModel.swift; sourceTree = "<group>"; };
+		ED8C2CDB2A19E20400AE2D6D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		EDE5F81D2A1721AF00AFDF93 /* PocketGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE5F8202A1721AF00AFDF93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDE5F8222A1721AF00AFDF93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,9 +122,18 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		ED8C2CDA2A19E1E600AE2D6D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ED8C2CDB2A19E20400AE2D6D /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		EDE5F8142A1721AF00AFDF93 = {
 			isa = PBXGroup;
 			children = (
+				ED8C2CDA2A19E1E600AE2D6D /* Services */,
 				EDE5F8532A17243100AFDF93 /* View Models */,
 				EDE5F8522A17242A00AFDF93 /* View */,
 				EDE5F8502A1723DF00AFDF93 /* Model */,
@@ -358,6 +369,7 @@
 				EDE5F8212A1721AF00AFDF93 /* AppDelegate.swift in Sources */,
 				ED8C2CD32A18744000AE2D6D /* User.swift in Sources */,
 				EDE5F8232A1721AF00AFDF93 /* SceneDelegate.swift in Sources */,
+				ED8C2CDC2A19E20400AE2D6D /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

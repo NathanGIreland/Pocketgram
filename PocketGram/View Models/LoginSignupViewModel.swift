@@ -12,54 +12,25 @@ import FirebaseFirestore
 
 final class LoginSignupViewModel{
     
-    var ref: DocumentReference? = nil
-    let db = Firestore.firestore()
+    private var AService = AuthService()
     
-    func Login(_ email: String, _ password: String){
-        Auth.auth().signIn(withEmail: email, password: password ){authResult, error in
-            
-            
-            if error != nil {
-                print("Login errors: \(String(describing: error?.localizedDescription))")
-            }else{
-                print("User successfully logged in")
-            }
-
-        }
-       
+    /// Calls AuthService to login users
+    /// - Parameters:
+    ///   - email: user email
+    ///   - password: user password
+    func login(_ email: String, _ password: String){
+        AService.login(email, password)
     }
     
+    /// Calls AuthService to sign up new users
+    /// - Parameters:
+    ///   - email: user email
+    ///   - password: user password
     func signUp(_ email: String, _ password: String){
-        Auth.auth().createUser(withEmail: email, password: password) {authResult, error in
-            
-            if error != nil {
-                print("Sign up errors: \(String(describing: error?.localizedDescription))")
-            }else{
-                print("User successfully Signed up")
-                
-                self.ref = self.db.collection("Users").addDocument(data: [
-                    "First Name": "nathan",
-                    "Last Name": "i",
-                    "email": Auth.auth().currentUser?.email,
-                    "username": "@1232",
-                    "profile-picture": "https://",
-                    "status": "💀",
-                    "bio": "fun",
-                    "uid": Auth.auth().currentUser?.uid,
-                    
-                ]) { err in
-                    if let err = err {
-                        print("Error adding document: \(err)")
-                    }else{
-                        print("Document added with ID: \(self.ref!.documentID)")
-                    }
-                }
-            }
-
-            
-        }
-       
+        AService.signUp(email, password)
     }
+    
+
 
     
 }
