@@ -7,11 +7,14 @@
 
 import UIKit
 import PhotosUI
+import AlamofireImage
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet weak var commentField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    
+    let scaledSize = CGSize(width: 300, height: 300)
     
     
     override func viewDidLoad() {
@@ -48,6 +51,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as! UIImage
+        
+        let scaledImage = image.af.imageScaled(to: scaledSize)
+        
+        imageView.image = scaledImage
+        
+        dismiss(animated: true, completion: nil)
     }
     
     
