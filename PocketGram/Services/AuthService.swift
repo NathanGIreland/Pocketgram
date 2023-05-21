@@ -15,19 +15,16 @@ final class AuthService{
     var ref: DocumentReference? = nil
     let db = Firestore.firestore()
     
+    /*
+    // MARK: - Authentication functions
+    */
+    
     /// Login and Authenticate users
     /// - Parameters:
     ///   - email: user email
     ///   - password: user password
     func login(_ email: String, _ password: String, completion: @escaping (Bool) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password ){authResult, error in
-            
-//            if error != nil {
-//                print("Login errors: \(String(describing: error?.localizedDescription))")
-//            }else{
-//                print("User successfully logged in")
-//            }
-            
             if let error = error {
                 print("Login errors: \(String(describing: error.localizedDescription))")
                 completion(false) // Call the completion handler with false on error
@@ -46,17 +43,19 @@ final class AuthService{
     /// - Parameters:
     ///   - email: user email
     ///   - password: user password
+    ///   - completion: returns success if user is successfully Authenticated. Returns false if unsuccesssful auth or unknown error
     func signUp(_ email: String, _ password: String, completion: @escaping (Bool) -> Void) {
           Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
               if let error = error {
                   print("Sign up errors: \(error.localizedDescription)")
-                  completion(false) // Call the completion handler with false on error
+                  completion(false)
               } else if authResult?.user.email != nil {
                   print("User successfully signed up")
-                  completion(true) // Call the completion handler with true on success
+                  createNewUser(_ user: userModel)
+                  completion(true)
               } else {
                   print("Unexpected error occurred")
-                  completion(false) // Call the completion handler with false on unexpected error
+                  completion(false)
               }
           }
       }
