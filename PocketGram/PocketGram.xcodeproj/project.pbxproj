@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED2F5E152A1A640100B68029 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F5E142A1A640100B68029 /* CameraViewController.swift */; };
 		ED8C2CC82A18269400AE2D6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED8C2CC72A18269400AE2D6D /* GoogleService-Info.plist */; };
 		ED8C2CC92A18269400AE2D6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED8C2CC72A18269400AE2D6D /* GoogleService-Info.plist */; };
 		ED8C2CCA2A18269400AE2D6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED8C2CC72A18269400AE2D6D /* GoogleService-Info.plist */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED2F5E142A1A640100B68029 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		ED8C2CC72A18269400AE2D6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED8C2CCC2A182FD300AE2D6D /* Junicode-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Junicode-Bold.ttf"; path = "../../../../../Downloads/junicode-1/Junicode-Bold.ttf"; sourceTree = "<group>"; };
 		ED8C2CD22A18744000AE2D6D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			children = (
 				EDE5F8562A17299900AFDF93 /* LoginViewController.swift */,
 				EDE5F8582A1729E400AFDF93 /* FeedViewController.swift */,
+				ED2F5E142A1A640100B68029 /* CameraViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				EDE5F8592A1729E400AFDF93 /* FeedViewController.swift in Sources */,
 				EDE5F8212A1721AF00AFDF93 /* AppDelegate.swift in Sources */,
 				ED8C2CD32A18744000AE2D6D /* User.swift in Sources */,
+				ED2F5E152A1A640100B68029 /* CameraViewController.swift in Sources */,
 				EDE5F8232A1721AF00AFDF93 /* SceneDelegate.swift in Sources */,
 				ED8C2CDC2A19E20400AE2D6D /* AuthService.swift in Sources */,
 			);

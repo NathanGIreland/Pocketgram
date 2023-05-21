@@ -18,16 +18,36 @@ final class LoginSignupViewModel{
     /// - Parameters:
     ///   - email: user email
     ///   - password: user password
-    func login(_ email: String, _ password: String){
-        AService.login(email, password)
+    func login(_ email: String, _ password: String, completion: @escaping (Bool) -> Void) {
+        AService.login (email, password) { Success in
+            if Success{
+                completion(true)
+    
+            }else{
+                completion(false)
+            }
+        }
     }
     
     /// Calls AuthService to sign up new users
     /// - Parameters:
     ///   - email: user email
     ///   - password: user password
-    func signUp(_ email: String, _ password: String){
-        AService.signUp(email, password)
+    func signUp(_ email: String, _ password: String, completion: @escaping (Bool) -> Void) {
+        
+        AService.signUp(email, password) { Success in
+            if Success{
+                completion(true)
+                
+            }else{
+                completion(false)
+            }
+        }
+        
+        
+        
+       
+        
     }
     
 

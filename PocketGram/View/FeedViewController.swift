@@ -19,18 +19,26 @@ class FeedViewController: UIViewController {
         addListenerToAuth()
     }
 
-
+    @IBAction func onNewPostBtn(_ sender: Any) {
+        self.performSegue(withIdentifier: "openCameraSegue", sender: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+    
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+    }
+    
+    
     
     /// Listener added to Auth to ...
     func addListenerToAuth(){
         Auth.auth().addStateDidChangeListener{(auth, user) in
             if user != nil {
                 //
-                //print("loggedin from feed: \(Auth.auth().currentUser?.email)")
+                print("loggedin from feed: \(Auth.auth().currentUser?.email)")
             }else{
                 //
             }

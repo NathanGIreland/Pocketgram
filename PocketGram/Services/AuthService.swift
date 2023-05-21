@@ -19,13 +19,24 @@ final class AuthService{
     /// - Parameters:
     ///   - email: user email
     ///   - password: user password
-    func login(_ email: String, _ password: String){
+    func login(_ email: String, _ password: String, completion: @escaping (Bool) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password ){authResult, error in
             
-            if error != nil {
-                print("Login errors: \(String(describing: error?.localizedDescription))")
-            }else{
+//            if error != nil {
+//                print("Login errors: \(String(describing: error?.localizedDescription))")
+//            }else{
+//                print("User successfully logged in")
+//            }
+            
+            if let error = error {
+                print("Login errors: \(String(describing: error.localizedDescription))")
+                completion(false) // Call the completion handler with false on error
+            } else if authResult?.user.email != nil {
                 print("User successfully logged in")
+                completion(true) // Call the completion handler with true on success
+            } else {
+                print("Unexpected error occurred")
+                completion(false) // Call the completion handler with false on unexpected error
             }
 
         }
@@ -35,23 +46,21 @@ final class AuthService{
     /// - Parameters:
     ///   - email: user email
     ///   - password: user password
-    func signUp(_ email: String, _ password: String){
-        Auth.auth().createUser(withEmail: email, password: password) {authResult, error in
+    func signUp(_ email: String, _ password: String, completion: @escaping (Bool) -> Void) {
+          Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+              if let error = error {
+                  print("Sign up errors: \(error.localizedDescription)")
+                  completion(false) // Call the completion handler with false on error
+              } else if authResult?.user.email != nil {
+                  print("User successfully signed up")
+                  completion(true) // Call the completion handler with true on success
+              } else {
+                  print("Unexpected error occurred")
+                  completion(false) // Call the completion handler with false on unexpected error
+              }
+          }
+      }
             
-            if error != nil {
-                print("Sign up errors: \(String(describing: error?.localizedDescription))")
-            }else{
-                print("User successfully Signed up")
-                
-                let newUser = userModel(firstName: "", lastName: "", email: email, username: "", profilePicture: "", status: "", bio: "", uid: authResult?.user.uid ?? "0")
-                
-                self.createNewUser(newUser)
-        
-            }
-
-            
-        }
-    }
     
     /*
     // MARK: - Helper functions
