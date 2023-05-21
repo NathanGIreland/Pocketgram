@@ -16,14 +16,7 @@ class FeedViewController: UIViewController {
     let db = Firestore.firestore()
     
     override func viewDidAppear(_ animated: Bool) {
-        Auth.auth().addStateDidChangeListener{(auth, user) in
-            if let currentUser = user {
-                //
-                //print("loggedin from feed: \(Auth.auth().currentUser?.email)")
-            }else{
-                //
-            }
-        }
+        addListenerToAuth()
     }
 
 
@@ -32,15 +25,16 @@ class FeedViewController: UIViewController {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    /// Listener added to Auth to ...
+    func addListenerToAuth(){
+        Auth.auth().addStateDidChangeListener{(auth, user) in
+            if user != nil {
+                //
+                //print("loggedin from feed: \(Auth.auth().currentUser?.email)")
+            }else{
+                //
+            }
+        }
     }
-    */
 
 }
