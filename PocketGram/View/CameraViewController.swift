@@ -8,13 +8,22 @@
 import UIKit
 import PhotosUI
 import AlamofireImage
+import FirebaseAuth
+
+//move mvvm
+import FirebaseStorage
+import FirebaseFirestore
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet weak var commentField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
-    let scaledSize = CGSize(width: 300, height: 300)
+    let scaledSize = CGSize(width: 400, height: 400)
+    var scaledImage = UIImage()
+    
+    var ref: DocumentReference? = nil
+    let db = Firestore.firestore()
     
     
     override func viewDidLoad() {
@@ -24,7 +33,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func onReturnBtn(_ sender: Any) {
-        print("return from camera")
         self.performSegue(withIdentifier: "unwindToFeed", sender: nil)
     }
     
@@ -52,7 +60,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as! UIImage
         
-        let scaledImage = image.af.imageScaled(to: scaledSize)
+        scaledImage = image.af.imageScaled(to: scaledSize)
         
         imageView.image = scaledImage
         
@@ -61,6 +69,57 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     @IBAction func onSubmitBtn(_ sender: Any) {
+        let storage = Storage.storage()
+        let imageData = scaledImage.jpegData(compressionQuality: 0.8)
+        let postTimestamp = Date().timeIntervalSince1970
+        
+        let storageRef = storage.reference().child("gs://pocketgram-1cd0f.appspot.com/post-images/\(Auth.auth().currentUser?.uid ?? "notf")-\(postTimestamp).jpg")
+        
+        storageRef.putData(imageData!, metadata: nil){ metadata, error in
+            if let error = error {
+                print("issue uploading img: \(error.localizedDescription)")
+            }else{
+                print("Image uploaded")
+                
+                storageRef.downloadURL{url, error in
+                    if let downloadURL = url{
+                        print("image url: \(downloadURL)")
+                        
+                        self.createNewPost(postModel(userId: Auth.auth().currentUser!.uid, imgUrl: url!.absoluteString, timestamp: postTimestamp, username: "make a profile service", userPfp: "String", likedBy: [], caption: self.commentField.text ?? ""))
+                        
+    
+                    }else if let error = error{
+                        print("issue downloading img: \(error.localizedDescription)")
+                    }
+                }
+                
+                
+                
+            }
+            
+        }
+        
+        
+    }
+    
+    func createNewPost(_ post: postModel){
+        self.ref = self.db.collection("Posts").addDocument(data: [
+            "postId" : post.postId,
+            "userId" : post.userId,
+            "imgUrl" : post.imgUrl,
+            "timestamp" : post.timestamp,
+            "username" : post.username,
+            "userPfp" : post.userPfp,
+            "commentId" : post.commentId,
+            "likedBy" : post.likedBy,
+            "caption" : post.caption,
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            }else{
+                print("Document added with ID: \(self.ref!.documentID)")
+            }
+        }
     }
     
 
