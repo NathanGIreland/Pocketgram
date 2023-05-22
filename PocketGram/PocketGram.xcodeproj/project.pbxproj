@@ -19,6 +19,9 @@
 		ED8C2CD92A19781200AE2D6D /* LoginSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C2CD82A19781200AE2D6D /* LoginSignupViewModel.swift */; };
 		ED8C2CDC2A19E20400AE2D6D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C2CDB2A19E20400AE2D6D /* AuthService.swift */; };
 		EDD33D7F2A1ACB0000D0A8E5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD33D7E2A1ACB0000D0A8E5 /* Post.swift */; };
+		EDD33D812A1B06DE00D0A8E5 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD33D802A1B06DE00D0A8E5 /* CameraViewModel.swift */; };
+		EDD33D832A1B0CC900D0A8E5 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD33D822A1B0CC900D0A8E5 /* StorageService.swift */; };
+		EDD33D852A1B119900D0A8E5 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD33D842A1B119900D0A8E5 /* FirestoreService.swift */; };
 		EDE5F8212A1721AF00AFDF93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8202A1721AF00AFDF93 /* AppDelegate.swift */; };
 		EDE5F8232A1721AF00AFDF93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8222A1721AF00AFDF93 /* SceneDelegate.swift */; };
 		EDE5F8282A1721AF00AFDF93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE5F8262A1721AF00AFDF93 /* Main.storyboard */; };
@@ -27,7 +30,7 @@
 		EDE5F8382A1721B200AFDF93 /* PocketGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8372A1721B200AFDF93 /* PocketGramTests.swift */; };
 		EDE5F8422A1721B200AFDF93 /* PocketGramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8412A1721B200AFDF93 /* PocketGramUITests.swift */; };
 		EDE5F8442A1721B200AFDF93 /* PocketGramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8432A1721B200AFDF93 /* PocketGramUITestsLaunchTests.swift */; };
-		EDE5F8572A17299900AFDF93 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8562A17299900AFDF93 /* LoginViewController.swift */; };
+		EDE5F8572A17299900AFDF93 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8562A17299900AFDF93 /* LoginSignupViewController.swift */; };
 		EDE5F8592A1729E400AFDF93 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F8582A1729E400AFDF93 /* FeedViewController.swift */; };
 		EDE5F8622A172E7D00AFDF93 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F8612A172E7D00AFDF93 /* FirebaseAnalytics */; };
 		EDE5F8642A172E7D00AFDF93 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EDE5F8632A172E7D00AFDF93 /* FirebaseAuth */; };
@@ -76,6 +79,9 @@
 		ED8C2CD82A19781200AE2D6D /* LoginSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewModel.swift; sourceTree = "<group>"; };
 		ED8C2CDB2A19E20400AE2D6D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		EDD33D7E2A1ACB0000D0A8E5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		EDD33D802A1B06DE00D0A8E5 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		EDD33D822A1B0CC900D0A8E5 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		EDD33D842A1B119900D0A8E5 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		EDE5F81D2A1721AF00AFDF93 /* PocketGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE5F8202A1721AF00AFDF93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDE5F8222A1721AF00AFDF93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +94,7 @@
 		EDE5F83D2A1721B200AFDF93 /* PocketGramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketGramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE5F8412A1721B200AFDF93 /* PocketGramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketGramUITests.swift; sourceTree = "<group>"; };
 		EDE5F8432A1721B200AFDF93 /* PocketGramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketGramUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EDE5F8562A17299900AFDF93 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EDE5F8562A17299900AFDF93 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
 		EDE5F8582A1729E400AFDF93 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F2E3F3471CF76AF098C56499 /* Pods-PocketGram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketGram.debug.xcconfig"; path = "Target Support Files/Pods-PocketGram/Pods-PocketGram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				ED8C2CDB2A19E20400AE2D6D /* AuthService.swift */,
+				EDD33D822A1B0CC900D0A8E5 /* StorageService.swift */,
+				EDD33D842A1B119900D0A8E5 /* FirestoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -242,7 +250,7 @@
 		EDE5F8522A17242A00AFDF93 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EDE5F8562A17299900AFDF93 /* LoginViewController.swift */,
+				EDE5F8562A17299900AFDF93 /* LoginSignupViewController.swift */,
 				EDE5F8582A1729E400AFDF93 /* FeedViewController.swift */,
 				ED2F5E142A1A640100B68029 /* CameraViewController.swift */,
 			);
@@ -253,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				ED8C2CD82A19781200AE2D6D /* LoginSignupViewModel.swift */,
+				EDD33D802A1B06DE00D0A8E5 /* CameraViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -517,14 +526,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE5F8572A17299900AFDF93 /* LoginViewController.swift in Sources */,
+				EDE5F8572A17299900AFDF93 /* LoginSignupViewController.swift in Sources */,
+				EDD33D852A1B119900D0A8E5 /* FirestoreService.swift in Sources */,
 				ED8C2CD92A19781200AE2D6D /* LoginSignupViewModel.swift in Sources */,
 				EDE5F8592A1729E400AFDF93 /* FeedViewController.swift in Sources */,
+				EDD33D812A1B06DE00D0A8E5 /* CameraViewModel.swift in Sources */,
 				EDE5F8212A1721AF00AFDF93 /* AppDelegate.swift in Sources */,
 				ED8C2CD32A18744000AE2D6D /* User.swift in Sources */,
 				ED2F5E152A1A640100B68029 /* CameraViewController.swift in Sources */,
 				EDE5F8232A1721AF00AFDF93 /* SceneDelegate.swift in Sources */,
 				ED8C2CDC2A19E20400AE2D6D /* AuthService.swift in Sources */,
+				EDD33D832A1B0CC900D0A8E5 /* StorageService.swift in Sources */,
 				EDD33D7F2A1ACB0000D0A8E5 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

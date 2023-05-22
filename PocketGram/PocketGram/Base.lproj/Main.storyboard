@@ -14,16 +14,16 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Login View Controller-->
+        <!--Login Signup View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="PocketGram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginSignupViewController" customModule="PocketGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg0-RH-hJT">
-                                <rect key="frame" x="77" y="497.5" width="260" height="55"/>
+                                <rect key="frame" x="77" y="490" width="260" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="bUm-k6-VCN"/>
                                 </constraints>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w4z-06-NRK">
-                                <rect key="frame" x="30" y="363.5" width="354" height="34"/>
+                                <rect key="frame" x="30" y="356" width="354" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="tcZ-dh-NKJ"/>
                                 </constraints>
@@ -42,7 +42,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WP5-Oc-aGy">
-                                <rect key="frame" x="30" y="427.5" width="354" height="34"/>
+                                <rect key="frame" x="30" y="420" width="354" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="nzh-ca-cPj"/>
                                 </constraints>
@@ -50,13 +50,13 @@
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POCKETGRAM" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCe-6o-ug6">
-                                <rect key="frame" x="16" y="269" width="382" height="52.5"/>
+                                <rect key="frame" x="16" y="269" width="382" height="45"/>
                                 <fontDescription key="fontDescription" name="Junicode-Bold" family="Junicode" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMC-bs-pE7">
-                                <rect key="frame" x="77" y="582.5" width="260" height="55"/>
+                                <rect key="frame" x="77" y="575" width="260" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="BlG-Zq-IHB"/>
                                 </constraints>
@@ -116,7 +116,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="CfF-Nh-e1h">
                         <barButtonItem key="rightBarButtonItem" title="NewPostBtn" image="plus" catalog="system" style="plain" id="ZVl-RR-ORA">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="jLP-zk-Lan">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="jLP-zk-Lan">
                                 <rect key="frame" x="302" y="5" width="92" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -191,7 +191,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZbZ-Nz-ATo">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="NOo-I7-tNW">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="BmW-Hz-9rt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="BmW-Hz-9rt">
                                 <rect key="frame" x="20" y="5" width="92" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>

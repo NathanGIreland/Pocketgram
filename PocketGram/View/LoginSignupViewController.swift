@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  LoginSignupViewController.swift
 //  PocketGram
 //
 //  Created by Nathan Ireland on 5/18/23.
@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginSignupViewController: UIViewController {
     
     private var LSViewModel = LoginSignupViewModel()
 

@@ -14,6 +14,7 @@ final class AuthService{
     
     var ref: DocumentReference? = nil
     let db = Firestore.firestore()
+    let fireSService = FirestoreService()
     
     /*
     // MARK: - Authentication functions
@@ -51,8 +52,10 @@ final class AuthService{
                   completion(false)
               } else if authResult?.user.email != nil {
                   print("successfully signed up")
-                  self.createNewUser(userModel(firstName: "", lastName: "", email: email, username: "", profilePicture: "", status: "", bio: "", uid: (authResult?.user.uid)!))
+                  self.fireSService.createNewUser(userModel(firstName: "", lastName: "", email: email, username: "", profilePicture: "", status: "", bio: "", uid: (authResult?.user.uid)!))
+                  
                   completion(true)
+                  
               } else {
                   print("Unexpected error occurred")
                   completion(false)
@@ -61,30 +64,9 @@ final class AuthService{
       }
             
     
-    /*
-    // MARK: - Helper functions
-    */
+
     
-    /// Creates a new user in user collection
-    /// - Parameter user: userModel
-    func createNewUser(_ user: userModel){
-        self.ref = self.db.collection("Users").addDocument(data: [
-            "first-name": user.firstName,
-            "last-name": user.lastName,
-            "email": user.email,
-            "username": user.username,
-            "profile-picture": user.profilePicture,
-            "status": user.status,
-            "bio": user.bio,
-            "uid": user.uid,
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            }else{
-                print("Document added with ID: \(self.ref!.documentID)")
-            }
-        }
-    }
+    
     
     
 }
