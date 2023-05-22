@@ -18,10 +18,10 @@ To create a comprehensive Instagram clone app, I intend to leverage the followin
 
 ### Version 1 Features (MVP)
 
-- [ ] Styled Launch & Login Screen.
-- [ ] Users can Sign Up.
-- [ ] Users can Login.
-- [ ] Ability to take a photo, add a caption, and post it to the server.
+- [X] Styled Launch & Login Screen.
+- [X] Users can Sign Up.
+- [X] Users can Login.
+- [X] Ability to take a photo, add a caption, and post it to the server.
 - [ ] Users can pull to refresh.
 - [ ] Users can view the last n# of posts.
 
@@ -37,6 +37,6 @@ To create a comprehensive Instagram clone app, I intend to leverage the followin
 - [ ] Profile pictures are shown for posts and comments.
 
 ### Acknowledgements
-####Fonts
+### Fonts
 - <a href="https://open-foundry.com/fonts/junicode_bold_condensed">Junicode</a>
 
