@@ -117,7 +117,7 @@
                     <navigationItem key="navigationItem" id="CfF-Nh-e1h">
                         <barButtonItem key="rightBarButtonItem" title="NewPostBtn" image="plus" catalog="system" style="plain" id="ZVl-RR-ORA">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="jLP-zk-Lan">
-                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <rect key="frame" x="302" y="4.5" width="92" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>

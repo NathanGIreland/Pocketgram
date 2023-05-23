@@ -66,7 +66,17 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func onSubmitBtn(_ sender: Any) {
         
-        cameraVM.submitPost(image: scaledImage, caption: commentField.text ?? "")
+        cameraVM.submitPost(image: scaledImage, caption: commentField.text ?? ""){ Success in
+            
+            if Success {
+                self.performSegue(withIdentifier: "unwindToFeed", sender: nil)
+            }else{
+                
+            print("Select a photo")
+                
+            }
+        }
+        
         
     }
     

@@ -21,14 +21,16 @@ final class StorageService {
     let fireSService = FirestoreService()
     
     
-    func storePhoto(imageData: Data, caption: String){
+    func storePhoto(imageData: Data, caption: String, completion: @escaping (Bool) -> Void){
         postTimestamp = Date().timeIntervalSince1970
         
         let storageRef = storage.reference().child("gs://pocketgram-1cd0f.appspot.com/post-images/\(Auth.auth().currentUser?.uid ?? "notf")-\(postTimestamp).jpg")
-        
+       
         storageRef.putData(imageData, metadata: nil){ metadata, error in
             if let error = error {
                 print("issue uploading img: \(error.localizedDescription)")
+                completion(false)
+                
             }else{
                 print("Image uploaded")
                 
@@ -37,11 +39,14 @@ final class StorageService {
                         print("image url: \(downloadURL)")
                         
                         self.fireSService.createNewPost(postModel(userId: Auth.auth().currentUser!.uid, imgUrl: url!.absoluteString, timestamp: self.postTimestamp, username: "make a profile service", userPfp: "String", likedBy: [], caption: caption))
+                        
+                        completion(true)
                             
                     
     
                     }else if let error = error{
                         print("issue downloading img: \(error.localizedDescription)")
+                        completion(false)
                     }
                 }
                 
