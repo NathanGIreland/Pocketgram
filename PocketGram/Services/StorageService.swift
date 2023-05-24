@@ -38,7 +38,8 @@ final class StorageService {
                     if let downloadURL = url{
                         print("image url: \(downloadURL)")
                         
-                        self.fireSService.createNewPost(postModel(userId: Auth.auth().currentUser!.uid, imgUrl: url!.absoluteString, timestamp: self.postTimestamp, username: "make a profile service", userPfp: "String", likedBy: [], caption: caption))
+                        //TODO: update username with profile service
+                        self.fireSService.createNewPost(postModel(userId: Auth.auth().currentUser!.uid, imgUrl: url!.absoluteString, timestamp: self.postTimestamp, username: Auth.auth().currentUser!.uid, userPfp: "String", caption: caption))
                         
                         completion(true)
                             

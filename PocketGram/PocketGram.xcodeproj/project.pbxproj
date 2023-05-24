@@ -18,6 +18,8 @@
 		ED8C2CD32A18744000AE2D6D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C2CD22A18744000AE2D6D /* User.swift */; };
 		ED8C2CD92A19781200AE2D6D /* LoginSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C2CD82A19781200AE2D6D /* LoginSignupViewModel.swift */; };
 		ED8C2CDC2A19E20400AE2D6D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C2CDB2A19E20400AE2D6D /* AuthService.swift */; };
+		EDB10AE72A1DCC090057431F /* keyboardDismissal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB10AE62A1DCC090057431F /* keyboardDismissal.swift */; };
+		EDB24FAB2A1DA19E0068A79A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB24FAA2A1DA19E0068A79A /* PostCell.swift */; };
 		EDD33D7F2A1ACB0000D0A8E5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD33D7E2A1ACB0000D0A8E5 /* Post.swift */; };
 		EDD33D812A1B06DE00D0A8E5 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD33D802A1B06DE00D0A8E5 /* CameraViewModel.swift */; };
 		EDD33D832A1B0CC900D0A8E5 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD33D822A1B0CC900D0A8E5 /* StorageService.swift */; };
@@ -78,6 +80,8 @@
 		ED8C2CD22A18744000AE2D6D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ED8C2CD82A19781200AE2D6D /* LoginSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewModel.swift; sourceTree = "<group>"; };
 		ED8C2CDB2A19E20400AE2D6D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		EDB10AE62A1DCC090057431F /* keyboardDismissal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardDismissal.swift; sourceTree = "<group>"; };
+		EDB24FAA2A1DA19E0068A79A /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		EDD33D7E2A1ACB0000D0A8E5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		EDD33D802A1B06DE00D0A8E5 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		EDD33D822A1B0CC900D0A8E5 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
@@ -180,13 +184,21 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		EDB24FA92A1DA1090068A79A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EDB24FAA2A1DA19E0068A79A /* PostCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		EDE5F8142A1721AF00AFDF93 = {
 			isa = PBXGroup;
 			children = (
 				ED8C2CDA2A19E1E600AE2D6D /* Services */,
 				EDE5F8532A17243100AFDF93 /* View Models */,
-				EDE5F8522A17242A00AFDF93 /* View */,
-				EDE5F8502A1723DF00AFDF93 /* Model */,
+				EDE5F8522A17242A00AFDF93 /* Views */,
+				EDE5F8502A1723DF00AFDF93 /* Models */,
 				EDE5F81F2A1721AF00AFDF93 /* PocketGram */,
 				EDE5F8362A1721B200AFDF93 /* PocketGramTests */,
 				EDE5F8402A1721B200AFDF93 /* PocketGramUITests */,
@@ -217,6 +229,7 @@
 				EDE5F82B2A1721B100AFDF93 /* LaunchScreen.storyboard */,
 				EDE5F82E2A1721B100AFDF93 /* Info.plist */,
 				ED8C2CC72A18269400AE2D6D /* GoogleService-Info.plist */,
+				EDB10AE62A1DCC090057431F /* keyboardDismissal.swift */,
 			);
 			path = PocketGram;
 			sourceTree = "<group>";
@@ -238,23 +251,24 @@
 			path = PocketGramUITests;
 			sourceTree = "<group>";
 		};
-		EDE5F8502A1723DF00AFDF93 /* Model */ = {
+		EDE5F8502A1723DF00AFDF93 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				ED8C2CD22A18744000AE2D6D /* User.swift */,
 				EDD33D7E2A1ACB0000D0A8E5 /* Post.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		EDE5F8522A17242A00AFDF93 /* View */ = {
+		EDE5F8522A17242A00AFDF93 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				EDE5F8562A17299900AFDF93 /* LoginSignupViewController.swift */,
 				EDE5F8582A1729E400AFDF93 /* FeedViewController.swift */,
 				ED2F5E142A1A640100B68029 /* CameraViewController.swift */,
+				EDB24FA92A1DA1090068A79A /* Cells */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EDE5F8532A17243100AFDF93 /* View Models */ = {
@@ -528,6 +542,7 @@
 			files = (
 				EDE5F8572A17299900AFDF93 /* LoginSignupViewController.swift in Sources */,
 				EDD33D852A1B119900D0A8E5 /* FirestoreService.swift in Sources */,
+				EDB24FAB2A1DA19E0068A79A /* PostCell.swift in Sources */,
 				ED8C2CD92A19781200AE2D6D /* LoginSignupViewModel.swift in Sources */,
 				EDE5F8592A1729E400AFDF93 /* FeedViewController.swift in Sources */,
 				EDD33D812A1B06DE00D0A8E5 /* CameraViewModel.swift in Sources */,
@@ -537,6 +552,7 @@
 				EDE5F8232A1721AF00AFDF93 /* SceneDelegate.swift in Sources */,
 				ED8C2CDC2A19E20400AE2D6D /* AuthService.swift in Sources */,
 				EDD33D832A1B0CC900D0A8E5 /* StorageService.swift in Sources */,
+				EDB10AE72A1DCC090057431F /* keyboardDismissal.swift in Sources */,
 				EDD33D7F2A1ACB0000D0A8E5 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

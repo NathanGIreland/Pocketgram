@@ -22,8 +22,11 @@ class LoginSignupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //addListenerToAuth()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        hideKeyboardWhenTappedAround()
     }
     
     /*

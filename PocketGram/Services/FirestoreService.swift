@@ -21,13 +21,13 @@ final class FirestoreService{
     
     func createNewPost(_ post: postModel){
         self.ref = self.db.collection("Posts").addDocument(data: [
-            "postId" : post.postId,
+            "postId" : self.ref?.documentID as Any,
             "userId" : post.userId,
             "imgUrl" : post.imgUrl,
             "timestamp" : post.timestamp,
             "username" : post.username,
             "userPfp" : post.userPfp,
-            "commentId" : post.commentId,
+            "commentIds" : post.commentIds,
             "likedBy" : post.likedBy,
             "caption" : post.caption,
         ]) { err in
