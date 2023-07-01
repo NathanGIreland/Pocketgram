@@ -34,6 +34,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
+        let refreshControl = UIRefreshControl();
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: .valueChanged)
+           
+        self.tableView.refreshControl = refreshControl
+        
     }
     
     @IBAction func onNewPostBtn(_ sender: Any) {
@@ -78,7 +83,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             if user != nil {
                 print("Updated user authed")
             }else{
-                //
+                print("Updated user not authed")
             }
         }
     }
@@ -106,13 +111,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
 
                 self.retrivedPosts = posts!
-                print("username: \(self.retrivedPosts[0].username)")
                 self.tableView.reloadData()
 
             }else{
                 print("error retriving post: \(error)")
             }
         }
+    }
+    
+    @objc func refreshControlAction(_ refreshControl: UIRefreshControl) {
+            getPost()
+            
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                // End refreshing on the refresh control
+                refreshControl.endRefreshing()
+            }
     }
 
 }
