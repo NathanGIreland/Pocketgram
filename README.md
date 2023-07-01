@@ -21,15 +21,21 @@ To create a comprehensive Instagram clone app, I intend to leverage the followin
 - [X] Launch Page. 
 - [X] Login/Sign Up.
     -  Users can Sign Up.
+
         <img src="/src/sign_up_V1.gif" width="250" height="500"/>
 
     -  Users can Login.
+
         <img src="/src/Login_V1.gif" width="250" height="500"/>
 
 - [X] Ability to take a photo, add a caption, and post it to the server.
+
     <img src="/src/photo_capture_V1.gif" width="250" height="500"/>
+
 - [X] Users can pull to refresh.
+
     <img src="/src/pull_to_refresh_V1.gif" width="500" height="500"/>
+    
 - [X] Users can view the last n# of posts.
 
 ### Version 2 Features (MVP 2)
