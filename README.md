@@ -16,25 +16,37 @@ To create a comprehensive Instagram clone app, I intend to leverage the followin
 
 <!-- 6. **Image Processing**: Implementing image processing functionalities such as resizing, cropping, and applying filters using libraries like Sharp, GraphicsMagick, or ImageMagick. -->
 
-### Version 1 Features (MVP)
+### Version 1 Features (MVP 1) [Completed]
 
-- [X] Styled Launch & Login Screen.
-- [X] Users can Sign Up.
-- [X] Users can Login.
+- [X] Launch Page. 
+- [X] Login/Sign Up.
+    -  Users can Sign Up.
+        <img src="/src/sign_up_V1.gif" width="250" height="500"/>
+
+    -  Users can Login.
+        <img src="/src/Login_V1.gif" width="250" height="500"/>
+
 - [X] Ability to take a photo, add a caption, and post it to the server.
-- [ ] Users can pull to refresh.
-- [ ] Users can view the last n# of posts.
+    <img src="/src/photo_capture_V1.gif" width="250" height="500"/>
+- [X] Users can pull to refresh.
+    <img src="/src/pull_to_refresh_V1.gif" width="500" height="500"/>
+- [X] Users can view the last n# of posts.
 
-### Future Features
-
-- [ ] Location Tagging.
-- [ ] Ability to stay logged in across restarts.
-- [ ] Users can log out.
+### Version 2 Features (MVP 2)
+- [ ] Infinity Scroll
+- [ ] Users can add profile pictures.
+- [ ] Users can add username.
 - [ ] Users can comment on posts.
 - [ ] View comments on posts.
-- [ ] Users can add new comments.
+- [ ] Users can log out.
+- [ ] Ability to stay logged in across restarts.
+
+### Future Features
+- [ ] Personal Feed
+- [ ] Location Tagging.
 - [ ] Users can add profile pictures.
 - [ ] Profile pictures are shown for posts and comments.
+- [ ] Custom Camera
 
 ### Acknowledgements
 ### Fonts
