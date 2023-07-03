@@ -16,6 +16,11 @@ class LoginSignupViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var signUpBtn: UIButton!
+    
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+        try! Auth.auth().signOut()
+        addListenerToAuth()
+    }
 
     let loggedSignedSegue = "loginSegue"
     var isUserAuthenticated = false
@@ -81,6 +86,7 @@ class LoginSignupViewController: UIViewController {
             }
         }
     }
+    
 
 }
 

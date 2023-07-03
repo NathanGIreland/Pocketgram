@@ -84,6 +84,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print("Updated user authed")
             }else{
                 print("Updated user not authed")
+                self.performSegue(withIdentifier: "openCameraSegue", sender: nil)
             }
         }
     }

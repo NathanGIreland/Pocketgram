@@ -170,6 +170,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CfF-Nh-e1h">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="R0L-NZ-w7a">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="GAs-vN-cnf">
+                                <rect key="frame" x="-37" y="-17" width="92" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <segue destination="4b8-29-kYO" kind="unwind" unwindAction="unwind:" id="Jyi-Bz-zdY"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="NewPostBtn" image="plus" catalog="system" style="plain" id="ZVl-RR-ORA">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="jLP-zk-Lan">
                                 <rect key="frame" x="302" y="4.5" width="92" height="35"/>
