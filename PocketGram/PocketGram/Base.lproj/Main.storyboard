@@ -280,7 +280,7 @@
         <!--Navigation Controller-->
         <scene sceneID="faQ-OP-a9k">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="okB-cY-K4U" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="feedViewController" automaticallyAdjustsScrollViewInsets="NO" id="okB-cY-K4U" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cOw-fQ-Txl">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>

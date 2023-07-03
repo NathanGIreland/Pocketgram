@@ -45,7 +45,7 @@ To create a comprehensive Instagram clone app, I intend to leverage the followin
 - [ ] Users can comment on posts.
 - [ ] View comments on posts.
 - [ ] Users can log out.
-- [ ] Ability to stay logged in across restarts.
+- [X] Ability to stay logged in across restarts.
 
 ### Future Features
 - [ ] Personal Feed

@@ -22,7 +22,7 @@ class LoginSignupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //addListenerToAuth()
+        addListenerToAuth()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,7 +71,16 @@ class LoginSignupViewController: UIViewController {
     // MARK: - Helper functions
     */
     
-    
+    func addListenerToAuth(){
+        Auth.auth().addStateDidChangeListener{(auth, user) in
+            if user != nil {
+                print("Updated user authed")
+                self.performSegue(withIdentifier: self.loggedSignedSegue, sender: nil)
+            }else{
+                print("Updated user not authed")
+            }
+        }
+    }
 
 }
 

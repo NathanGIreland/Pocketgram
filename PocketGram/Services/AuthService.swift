@@ -40,6 +40,7 @@ final class AuthService{
         }
     }
     
+    
     /// Signs up,  Authenticate, and create user document in user collection
     /// - Parameters:
     ///   - email: user email
