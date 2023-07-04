@@ -15,6 +15,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var currentUser: User?
     let db = Firestore.firestore()
+    let fireSService = FirestoreService()
     var retrivedPosts = [postModel]()
     @IBOutlet weak var tableView: UITableView!
     
@@ -52,28 +53,76 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let post = retrivedPosts[section]
+        let comments = post.comments.isEmpty ? [[:]] : post.comments
         print("posts count: \(retrivedPosts.count)")
+        return retrivedPosts.count + 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int{
         return retrivedPosts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
+        let post = retrivedPosts[indexPath.section]
+        let comments = post.comments.isEmpty ? [[:]] : post.comments
         
-        let post = retrivedPosts[indexPath.row]
-        
-        cell.usernamLabel.text = "@\(retrivedPosts[indexPath.row].username)"
-        
-        cell.captionLabel.text = retrivedPosts[indexPath.row].caption
-        
-        let imgUrl = URL(string: retrivedPosts[indexPath.row].imgUrl)
-        
-        cell.photoView.af_setImage(withURL: imgUrl!)
-        
-        return cell
+                                                      
+        //if indexPath.row == 0{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
+            
+            cell.usernamLabel.text = "@\(retrivedPosts[indexPath.row].username)"
+            
+            cell.captionLabel.text = retrivedPosts[indexPath.row].caption
+            
+            let imgUrl = URL(string: retrivedPosts[indexPath.row].imgUrl)
+            
+            cell.photoView.af_setImage(withURL: imgUrl!)
+            return cell
+//        }else{
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as! CommentCell
+//
+//            let comment = comments[indexPath.row - 1]
+//
+//            cell.commentLabel.text = comment["username"]
+//            cell.usernameLabel.text = comment["comment"]
+//            return cell
+//        }
+                                
+       
+    
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        var post = retrivedPosts[indexPath.section]
+        
+        self.fireSService.getUsername(userID: Auth.auth().currentUser!.uid) { username in
+            if let username = username {
+                // Use the retrieved username here
+                print("Username found. \(username)")
+                post.comments.append(["username": username, "userId": Auth.auth().currentUser!.uid, "comment": "This is the first comment"])
+                print("hel \(post.comments)")
+                
+                let docRef = self.db.collection("Posts").document(post.postId)
+
+                docRef.updateData(["comments" : post.comments]){error in
+                    if let error = error{
+                        print("error updating comment \(error)")
+                    }else{
+                        print("comments updated")
+                        DispatchQueue.main.async {
+                            self.retrivedPosts[indexPath.section] = post
+                            self.tableView.reloadData()
+                        }
+                    }
+                }
+                
+            } else {
+                // Unable to retrieve the username
+                print("Username needed to comment")
+            }
+        }
+        
     }
     
     
@@ -98,17 +147,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let posts = querySnapshot?.documents.compactMap { document -> postModel? in
 
                     let data = document.data() //key for dictonary to retrive values from documents
-                    let postId = document.documentID
+                    let postId = data["postId"] as? String ?? ""
                     let userId = data["userId"] as? String ?? ""
                     let imgUrl = data["imgUrl"] as? String ?? ""
                     let timestamp = data["timestamp"] as? Double ?? 0.0
                     let username = data["username"] as? String ?? ""
                     let userPfp = data["userPfp"] as? String ?? ""
-                    let commentIds = data["commentIds"] as? [Any] ?? []
+                    let comments = data["comments"] as? [[String: String]] ?? [[:]]
                     let likedBy = data["likedBy"] as? [Any] ?? []
                     let caption = data["caption"] as? String ?? ""
 
-                    return postModel(userId: userId, imgUrl: imgUrl, timestamp: timestamp, username: username, userPfp: userPfp, caption: caption)
+                    return postModel(postId: postId, userId: userId, imgUrl: imgUrl, timestamp: timestamp, username: username, userPfp: userPfp, comments: comments, caption: caption)
                 }
 
                 self.retrivedPosts = posts!

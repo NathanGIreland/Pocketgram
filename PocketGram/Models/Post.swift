@@ -8,13 +8,13 @@
 import Foundation
 
 struct postModel{
-    var postId = 0
+    var postId = ""
     var userId: String
     var imgUrl: String
     var timestamp: Double
     var username: String
     var userPfp: String
-    var commentIds = [String]()
+    var comments = [[String: String]]()
     var likedBy = [String]()
     var caption: String
 }

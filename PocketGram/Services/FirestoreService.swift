@@ -29,7 +29,7 @@ final class FirestoreService{
             "timestamp" : post.timestamp,
             "username" : post.username,
             "userPfp" : post.userPfp,
-            "commentIds" : post.commentIds,
+            "comments" : post.comments,
             "likedBy" : post.likedBy,
             "caption" : post.caption,
         ]) { err in
