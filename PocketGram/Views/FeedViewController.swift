@@ -54,9 +54,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let post = retrivedPosts[section]
-        let comments = post.comments.isEmpty ? [[:]] : post.comments
+        let comments = post.comments.isEmpty ? [] : post.comments
         print("posts count: \(retrivedPosts.count)")
-        return retrivedPosts.count + 1
+        print("comments count: \(retrivedPosts[0].comments.count)")
+        return comments.count + 1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int{
@@ -65,29 +66,26 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = retrivedPosts[indexPath.section]
-        let comments = post.comments.isEmpty ? [[:]] : post.comments
+        let comments = post.comments.isEmpty ? [] : post.comments
         
                                                       
-        //if indexPath.row == 0{
+        if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
             
-            cell.usernamLabel.text = "@\(retrivedPosts[indexPath.row].username)"
-            
-            cell.captionLabel.text = retrivedPosts[indexPath.row].caption
-            
-            let imgUrl = URL(string: retrivedPosts[indexPath.row].imgUrl)
-            
+            cell.usernamLabel.text = "@\(post.username)"
+            cell.captionLabel.text = post.caption
+            let imgUrl = URL(string: post.imgUrl)
             cell.photoView.af_setImage(withURL: imgUrl!)
+  
             return cell
-//        }else{
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as! CommentCell
-//
-//            let comment = comments[indexPath.row - 1]
-//
-//            cell.commentLabel.text = comment["username"]
-//            cell.usernameLabel.text = comment["comment"]
-//            return cell
-//        }
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as! CommentCell
+            
+            let comment = comments[indexPath.row - 1]
+            cell.commentLabel.text = comment["comment"]
+            cell.usernameLabel.text = comment["username"]
+            return cell
+        }
                                 
        
     
@@ -153,7 +151,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let timestamp = data["timestamp"] as? Double ?? 0.0
                     let username = data["username"] as? String ?? ""
                     let userPfp = data["userPfp"] as? String ?? ""
-                    let comments = data["comments"] as? [[String: String]] ?? [[:]]
+                    let comments = data["comments"] as? [[String: String]] ?? []
                     let likedBy = data["likedBy"] as? [Any] ?? []
                     let caption = data["caption"] as? String ?? ""
 
