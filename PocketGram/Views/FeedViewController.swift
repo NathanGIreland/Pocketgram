@@ -57,7 +57,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let comments = post.comments.isEmpty ? [] : post.comments
         print("posts count: \(retrivedPosts.count)")
         print("comments count: \(retrivedPosts[0].comments.count)")
-        return comments.count + 1
+        
+        if comments.count > 3{
+            return 4
+        }else{
+            return comments.count + 1
+        }
+    
     }
     
     func numberOfSections(in tableView: UITableView) -> Int{
@@ -83,7 +89,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             let comment = comments[indexPath.row - 1]
             cell.commentLabel.text = comment["comment"]
-            cell.usernameLabel.text = comment["username"]
+            cell.usernameLabel.text = "@\(comment["username"]!)"
             return cell
         }
                                 
