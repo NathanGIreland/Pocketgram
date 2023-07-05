@@ -11,6 +11,7 @@
 		0AC13DA3B34B2181A8C4A043 /* Pods_PocketGram_PocketGramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD7CF0A932AEDD3E43A4B94 /* Pods_PocketGram_PocketGramUITests.framework */; };
 		B6A9192B35F99871F7F7233A /* Pods_PocketGramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B145B4C1F8ACCE712EEA84 /* Pods_PocketGramTests.framework */; };
 		ED2F5E152A1A640100B68029 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F5E142A1A640100B68029 /* CameraViewController.swift */; };
+		ED62C5682A54DC51008EB0C9 /* AddCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62C5672A54DC51008EB0C9 /* AddCommentCell.swift */; };
 		ED8C2CC82A18269400AE2D6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED8C2CC72A18269400AE2D6D /* GoogleService-Info.plist */; };
 		ED8C2CC92A18269400AE2D6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED8C2CC72A18269400AE2D6D /* GoogleService-Info.plist */; };
 		ED8C2CCA2A18269400AE2D6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED8C2CC72A18269400AE2D6D /* GoogleService-Info.plist */; };
@@ -77,6 +78,7 @@
 		9A4B4418177053097150E7D9 /* Pods_PocketGram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketGram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD7CF0A932AEDD3E43A4B94 /* Pods_PocketGram_PocketGramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketGram_PocketGramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2F5E142A1A640100B68029 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		ED62C5672A54DC51008EB0C9 /* AddCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentCell.swift; sourceTree = "<group>"; };
 		ED8C2CC72A18269400AE2D6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED8C2CCC2A182FD300AE2D6D /* Junicode-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Junicode-Bold.ttf"; path = "../../../../../Downloads/junicode-1/Junicode-Bold.ttf"; sourceTree = "<group>"; };
 		ED8C2CD22A18744000AE2D6D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			children = (
 				EDB24FAA2A1DA19E0068A79A /* PostCell.swift */,
 				EDD2D5F82A536A9800FA07DE /* CommentCell.swift */,
+				ED62C5672A54DC51008EB0C9 /* AddCommentCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				ED2F5E152A1A640100B68029 /* CameraViewController.swift in Sources */,
 				EDE5F8232A1721AF00AFDF93 /* SceneDelegate.swift in Sources */,
 				EDD2D5F72A528AF300FA07DE /* Comment.swift in Sources */,
+				ED62C5682A54DC51008EB0C9 /* AddCommentCell.swift in Sources */,
 				ED8C2CDC2A19E20400AE2D6D /* AuthService.swift in Sources */,
 				EDD33D832A1B0CC900D0A8E5 /* StorageService.swift in Sources */,
 				EDB10AE72A1DCC090057431F /* keyboardDismissal.swift in Sources */,

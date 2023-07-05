@@ -58,11 +58,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         print("posts count: \(retrivedPosts.count)")
         print("comments count: \(retrivedPosts[0].comments.count)")
         
-        if comments.count > 3{
-            return 4
-        }else{
-            return comments.count + 1
-        }
+        return min(3, comments.count) + 2
+        
     
     }
     
@@ -73,23 +70,32 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = retrivedPosts[indexPath.section]
         let comments = post.comments.isEmpty ? [] : post.comments
+        var count = 0
         
                                                       
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
             
-            cell.usernamLabel.text = "@\(post.username)"
+            cell.usernamLabel.text = post.username
             cell.captionLabel.text = post.caption
             let imgUrl = URL(string: post.imgUrl)
             cell.photoView.af_setImage(withURL: imgUrl!)
-  
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: cell.bounds.size.width)
+                
             return cell
-        }else{
+        }else if indexPath.row <= min(3, comments.count){
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as! CommentCell
             
             let comment = comments[indexPath.row - 1]
             cell.commentLabel.text = comment["comment"]
-            cell.usernameLabel.text = "@\(comment["username"]!)"
+            cell.usernameLabel.text = comment["username"]
+
+            cell.separatorInset = UIEdgeInsets(top: 0, left: tableView.bounds.size.width, bottom: 0, right: 0)
+            
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell", for: indexPath) as! AddCommentCell
+            
             return cell
         }
                                 
